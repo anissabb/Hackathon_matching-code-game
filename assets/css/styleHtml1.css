@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+
+}
+
+@font-face {
+  font-family: 'GoogleSans';
+  src: url("../font/ProductSans-Regular.ttf");
+}
+
+body {
+  height: 100vh;
+  font-family: 'GoogleSans';
+  background-image: url("../img/2.png");
+  overflow: hidden;
+}
+
+#progressBar {
+  width: 20rem;
+  height: 20px;
+  border-radius: 25px;
+  border: 1.5px solid rgb(102, 102, 177);
+  margin-left: 35%;
+  /* margin-top: 1.5rem; */
+ 
+}
+
+#progressBarFull {
+  height: 20px;
+  background-color: rgb(54 54 121 / 69%);
+  width: 0%;
+  border-radius: 20px;
+}
+
+.score {
+  margin: auto;
+}
+
+.memory-game {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  perspective: 1000px;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.memory-card {
+  width: 150px;
+  height: 230px;
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  /* padding: 20px; */
+  position: absolute;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.container {
+  display: flex;
+  width: 80%;
+}
+
+#wrapper {
+  border-style: dotted;
+  width: 200px;
+  margin-top: 80px;
+  margin-left: 10vw;
+  height: 200px;
+  padding: 15px;
+  font-size: 2rem;
+  text-align: center;
+  color: rgb(54, 54, 121);
+  border-radius: 200px;
+}
+
+
+.btn-manche {
+  color: white;
+  background-color: rgb(114, 114, 177);
+  border-radius: 5px;
+  margin-left: 90vw;
+}
+
+.btn-manche:hover {
+  background-color: rgb(119, 197, 119);
+  color: black;
+}
+
+div #chrono{
+  margin-top: 7vh;
+  font-size: 3rem;
+  font-weight: bold;
+}
